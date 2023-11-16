@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Bank Przyszłości</title>
+</head>
+
+<body>
+
+  <nav>
+    <p class="welcome"> Zaloguj się, aby rozpocząć! </p>
+    <img src="logo.png" alt="Logo" class="logo aplikacji" />
+    <form class="login">
+      <input type="text" placeholder="LOGIN" class="login__input login__input--user" />
+
+      <input type="text" placeholder="PIN" maxlength="4" class="login__input login__input--pin" />
+      <button class="login__btn">&rarr;</button>
+    </form>
+  </nav>
+
+  <main class="app">
+
+    <div class="balance">
+      <div>
+        <p class="balance__label">Aktualne saldo</p>
+        <p class="balance__date">
+          As of <span class="date">05/03/2037</span>
+        </p>
+      </div>
+      <p class="balance__value">0000PLN</p>
+    </div>
+
+    <!-- MOVEMENTS -->
+    <div class="movements">
+      <div class="movements__row">
+        <div class="movements__type movements__type--deposit">2 Przychodzące </div>
+        <div class="movements__date">3 days ago</div>
+        <div class="movements__value">4 000€</div>
+      </div>
+      <div class="movements__row">
+        <div class="movements__type movements__type--withdrawal">
+          1 Wychodzące
+        </div>
+        <div class="movements__date">24/01/2037</div>
+        <div class="movements__value">-378PLN</div>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="summary">
+      <p class="summary__label">Suma</p>
+      <p class="summary__value summary__value--in">0000€</p>
+      <p class="summary__label">Wychodzące</p>
+      <p class="summary__value summary__value--out">0000€</p>
+      <p class="summary__label">Odsetki</p>
+      <p class="summary__value summary__value--interest">0000€</p>
+      <button class="btn--sort">&downarrow; SORTUJ</button>
+    </div>
+
+    <!-- OPERATION: TRANSFERS -->
+    <div class="operation operation--transfer">
+      <h2>Przelew </h2>
+      <form class="form form--transfer">
+        <input type="text" class="form__input form__input--to" />
+        <input type="number" class="form__input form__input--amount" />
+        <button class="form__btn form__btn--transfer">&rarr;</button>
+        <label class="form__label">Przelew do</label>
+        <label class="form__label">Kwota</label>
+      </form>
+    </div>
+
+    <!-- OPERATION: LOAN -->
+    <div class="operation operation--loan">
+      <h2>Pożyczka</h2>
+      <form class="form form--loan">
+        <input type="number" class="form__input form__input--loan-amount" />
+        <button class="form__btn form__btn--loan">&rarr;</button>
+        <label class="form__label form__label--loan">Kwota</label>
+      </form>
+    </div>
+
+    <!-- OPERATION: CLOSE -->
+    <div class="operation operation--close">
+      <h2>Zamknięcie konta</h2>
+      <form class="form form--close">
+        <input type="text" class="form__input form__input--user" />
+        <input type="password" maxlength="6" class="form__input form__input--pin" />
+        <button class="form__btn form__btn--close">&rarr;</button>
+        <label class="form__label">Potwierdź login</label>
+        <label class="form__label">Potwierdź pin</label>
+      </form>
+    </div>
+
+    <!-- LOGOUT TIMER -->
+    <p class="logout-timer">
+      Zostaniesz wylogowany <span class="timer">120</span>
+    </p>
+  </main>
+
+  <footer>
+    &copy; by Martyna Nysztal.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
